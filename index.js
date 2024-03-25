@@ -1,8 +1,12 @@
-const username = "\$ionutpantazi";
-const password = "nugCg1xFfDMauvlxYcBnhsLHezle4mggfMbPRoKnDjAdik4WHWcmR84uq86p";
-const log_url = 'https://ionutpantazi.scm.azurewebsites.net/api/triggeredwebjobs/err';
-const run_url = 'https://ionutpantazi.scm.azurewebsites.net/api/triggeredwebjobs/err/run';
-const log_path = 'C:\home\site\wwwroot\App_Data\jobs\triggered\debug\php.log';
+import express from "express";
 
-console.log(username);
-exit();
+const app = express();
+const port = 3000;
+
+app.get('/', (req, res) => {
+    res.send('Welcome to my server!');
+});
+
+app.listen(port, () => {
+    console.log(`Server is running on port ${port}`);
+});
