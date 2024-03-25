@@ -5,3 +5,4 @@ const run_url = 'https://ionutpantazi.scm.azurewebsites.net/api/triggeredwebjobs
 const log_path = 'C:\home\site\wwwroot\App_Data\jobs\triggered\debug\php.log';
 
 console.log(username);
+exit();
