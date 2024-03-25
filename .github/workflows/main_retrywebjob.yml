@@ -61,16 +61,4 @@ jobs:
           tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_92FF7584669543FE995018C37A8D70C5 }}
           subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_244FCACC074A4C65AEE4EA4AF528B33B }}
 
-      - name: 'Run Azure Functions Action'
-        uses: Azure/functions-action@v1
-        id: fa
-        with:
-          app-name: 'retrywebjob'
-          slot-name: 'Production'
-          package: ${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}
-
-      - name: 'Start Server'
-        shell: pwsh
-        run: |
-          npm run build --if-present
           
